@@ -26,11 +26,11 @@ function xlsx(v){const grid=[['녹화 시간','득점 팀','학년','삼선FC �
 ['xl/workbook.xml','<?xml version="1.0" encoding="UTF-8"?><workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><sheets><sheet name="골 기록" sheetId="1" r:id="rId1"/></sheets></workbook>'],
 ['xl/_rels/workbook.xml.rels','<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet1.xml"/></Relationships>'],['xl/worksheets/sheet1.xml',sheet]]).arrayBuffer()}
 function fileStamp(v){
- const parts=String(v.start||'').match(/^(\d{4})\s*[.\/-]\s*(\d{1,2})\s*[.\/-]\s*(\d{1,2})\s*\.?[T\s]+(\d{1,2}):(\d{2}):(\d{2})/);
+ const parts=String(v.start||'').match(/^(\d{4})\s*[.\/-]\s*(\d{1,2})\s*[.\/-]\s*(\d{1,2})\s*\.?[T\s]+(\d{1,2})\s*[:시]\s*(\d{1,2})\s*[:분]\s*(\d{1,2})\s*초?/);
  if(!parts)return '날짜시간미상';
  const [,y,m,d,h,mi,se]=parts;
  if(+m<1||+m>12||+d<1||+d>31||+h>24||+mi>59||+se>59)return '날짜시간미상';
- return y+'_'+pad(+m)+pad(+d)+'_'+pad(+h===24?0:+h)+mi+se;
+ return y+'_'+pad(+m)+pad(+d)+'_'+pad(+h===24?0:+h)+pad(+mi)+pad(+se);
 }
 function fileStem(v){return `${v.home}_vs_${v.away}_영상${pad(v.video)}_${fileStamp(v)}`.replace(/[\\/:*?"<>|\x00-\x1f]/g,'_')}
 
