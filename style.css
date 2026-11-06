@@ -90,3 +90,16 @@ button:not(:disabled):active,button:not(:disabled).touch-pressed{filter:brightne
 
 .btn[data-action="end"],.btn[data-action="end-confirm"]{background:#fff0f0;color:#30343b;border:1px solid #e8baba;font-size:20px;font-weight:800;min-height:56px;padding:14px 12px}
 .btn[data-action="end"]:not(:disabled):active,.btn[data-action="end"].touch-pressed,.btn[data-action="end-confirm"]:not(:disabled):active,.btn[data-action="end-confirm"].touch-pressed{background:#f9dede;border-color:#d99b9b;color:#30343b}
+
+/* v1.9.11: record-start attention pulse, only while ready */
+@keyframes start-ready-pulse{0%,83.333%{background:#eaf3fc}83.334%,100%{background:#c7e2ff}}
+.timer-btn.ready{animation:start-ready-pulse 3s steps(1,end) infinite}
+@media(prefers-reduced-motion:reduce){.timer-btn.ready{animation:none}}
+/* v1.9.11: saved-record bulk delete, below the history home button */
+.delete-all-btn{display:block;width:100%;min-height:37px!important;height:37px;margin:0 0 14px!important;padding:6px 12px;background:#424a54;color:#ffd0d0;border:1px solid #424a54;font-size:14px;font-weight:700}
+.delete-all-btn:disabled{opacity:.5}
+.delete-all-overlay{position:fixed;inset:0;z-index:100;background:#0007;display:flex;align-items:center;justify-content:center;padding:20px}
+.delete-all-dialog{width:min(390px,100%);background:#fff;border-radius:12px;padding:20px;box-shadow:0 12px 40px #0003}
+.delete-all-dialog>b{font-size:16px;line-height:1.5;display:block}
+.delete-all-dialog p{font-size:13px;line-height:1.5;color:#697481;margin:12px 0}
+.delete-all-dialog .rowbtn .btn{min-height:44px}
