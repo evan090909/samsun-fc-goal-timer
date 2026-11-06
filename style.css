@@ -88,5 +88,5 @@ button:not(:disabled):active,button:not(:disabled).touch-pressed{filter:brightne
 .export-note span+span{margin-top:3px}
 .detail-bottom-back{min-height:48px;margin-top:7px;background:#fff;border:1px solid #87a9dc;color:#235b9c;font-size:16px;font-weight:700}
 
-.btn[data-action="end"],.btn[data-action="end-confirm"]{background:#b91c1c;color:#fff;border:1px solid #b91c1c;font-size:20px;font-weight:800;min-height:56px;padding:14px 12px}
-.btn[data-action="end"]:not(:disabled):active,.btn[data-action="end"].touch-pressed,.btn[data-action="end-confirm"]:not(:disabled):active,.btn[data-action="end-confirm"].touch-pressed{background:#991b1b;border-color:#991b1b;color:#fff}
+.btn[data-action="end"],.btn[data-action="end-confirm"]{background:#fff0f0;color:#a33c3c;border:1px solid #e8baba;font-size:20px;font-weight:800;min-height:56px;padding:14px 12px}
+.btn[data-action="end"]:not(:disabled):active,.btn[data-action="end"].touch-pressed,.btn[data-action="end-confirm"]:not(:disabled):active,.btn[data-action="end-confirm"].touch-pressed{background:#f9dede;border-color:#d99b9b;color:#923434}
