@@ -1,4 +1,4 @@
-/* PWA lifecycle is separate from the original recorder. */
+
 (() => {
   if (!('serviceWorker' in navigator) || !window.isSecureContext) return;
   let registration, offered = null, applying = false;

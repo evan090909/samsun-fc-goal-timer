@@ -1,4 +1,4 @@
-const VERSION = 'v1.9.6-pwa-20261106-1';
+const VERSION = 'v1.9.7-pwa-20261106-1';
 const PREFIX = 'samsun-fc-goal-timer:' + self.registration.scope + ':';
 const CACHE = PREFIX + VERSION;
 const ASSETS = ['./', './index.html', './style.css', './app.js', './pwa.js', './manifest.webmanifest', './icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png'];
@@ -12,7 +12,6 @@ self.addEventListener('activate', event => event.waitUntil((async () => {
   const legacy = 'samsun-goal-v1-9-20261104';
   for (const key of await caches.keys()) {
     if (key.startsWith(PREFIX) && key !== CACHE) await caches.delete(key);
-    // Only remove the known old cache when it belongs to this exact scope.
     if (key === legacy) {
       const old = await caches.open(key);
       const entries = await old.keys();
