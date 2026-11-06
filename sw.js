@@ -1,4 +1,4 @@
-const VERSION = 'v1.9.12-pwa-20261107-1';
+const VERSION = 'v1.9.13-pwa-20261107-1';
 const PREFIX = 'samsun-fc-goal-timer:' + self.registration.scope + ':';
 const CACHE = PREFIX + VERSION;
 const ASSETS = ['./', './index.html', './style.css', './app.js', './pwa.js', './manifest.webmanifest', './icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/maskable-512.png', './icons/apple-touch-icon.png'];
