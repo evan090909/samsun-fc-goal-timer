@@ -103,3 +103,6 @@ button:not(:disabled):active,button:not(:disabled).touch-pressed{filter:brightne
 .delete-all-dialog>b{font-size:16px;line-height:1.5;display:block}
 .delete-all-dialog p{font-size:13px;line-height:1.5;color:#697481;margin:12px 0}
 .delete-all-dialog .rowbtn .btn{min-height:44px}
+
+/* v1.9.12: show both teams on recent goal records without truncating names */
+.record:has(button[data-action="edit"]) .teamname{white-space:normal;overflow:visible;text-overflow:clip;overflow-wrap:anywhere;line-height:1.25}
